@@ -12,11 +12,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class IRCTCDatePickerFixed {
 	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		WebDriver driver = new ChromeDriver();// launch the browser
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
-		driver.get("https://www.irctc.co.in/nget/train-search");
+		driver.get("https://www.irctc.co.in/nget/train-search");// launch the url on browser
 
 		// Open calendar and get the current date value
 		WebElement dateInput = driver.findElement(By.xpath("(//input[@type=\"text\"])[3]"));
