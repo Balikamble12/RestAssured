@@ -29,7 +29,7 @@ public class IRCTCDatePickerFixed {
 		try {
 			LocalDate date = LocalDate.parse(currentDate, formatter);
 			LocalDate newDate = date.plusDays(8);
-			System.out.println("Date after 8 days: " + newDate.format(formatter));
+			System.out.println("Date after 8 days: " + newDate.format(formatter));  // print the date 
 
 			String newDay = String.valueOf(newDate.getDayOfMonth());
 			int newYear = newDate.getYear();
@@ -37,7 +37,7 @@ public class IRCTCDatePickerFixed {
 
 			// Read the currently displayed calendar header
 			String displayedMonthYear = driver.findElement(By.className("ui-datepicker-title")).getText();
-			System.out.println("Calendar shows: " + displayedMonthYear);
+			System.out.println("Calendar shows: " + displayedMonthYear); // show the month and date
 
 			// Navigate calendar if needed
 			while (!displayedMonthYear.contains(String.valueOf(newYear))
